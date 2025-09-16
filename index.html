@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayodele's Designs</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <!-- header-starts -->
+    <header>
+      <div class="name"><span>Ayodele Bello</span><span>Peak!</span></div>
+      <div class="hamburger" id="menu">
+        <img src="./assets/hamburger.png" alt="menu-button" />
+      </div>
+    </header>
+    <div id="overlay" onclick="navcan()"></div>
+    <nav id="side-menu">
+      <ul>
+        <li>
+          <div class="Xmenu" id="Xmenu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="Xmenu-icon"
+              height="33px"
+              viewBox="0 -960 960 960"
+              width="33px"
+              fill="#000000"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li><a href="#" class="active" onclick="navcan()">home</a></li>
+        <li><a href="#skill" onclick="navcan()">Skills</a></li>
+        <li><a href="#about" onclick="navcan()">About me</a></li>
+        <li><a href="#project" onclick="navcan()">Projects</a></li>
+        <li><a href="#contact" onclick="navcan()">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div
+      class="logo"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-delay="100"
+    >
+      <img src="./assets/logo.jpg" alt="" />
+      <div class="false"></div>
+    </div>
+
+    <div
+      class="intro"
+      data-aos="fade-right"
+      data-aos-delay="200"
+      data-aos-duration="700"
+      data-aos-offset="100"
+    >
+      <p class="intro-1">Hi, I'm</p>
+      <p class="intro-2">
+        <span id="name"></span><span>Product Designer</span>
+      </p>
+      <p class="intro-3">
+        I'm a passionate and innovative Product designer and Student Architect
+        with a strong eye for detail and creativity. My work combines design
+        thinking, problem-solving and aesthetics to create functional, user
+        friendly digital products while also exploring the art and science of
+        architecture.
+      </p>
+    </div>
+    <div id="skill"></div>
+    <div
+      class="skills"
+      data-aos="fade-down"
+      data-aos-delay="50"
+      data-aos-duration="700"
+      data-aos-offset="100"
+    >
+      <h2>Skills | Services</h2>
+      <div class="skills-list">
+        <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Figma</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Framer</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Photoshop</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Illustrator</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Wordpress</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Webflow</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Notion</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Wix</span
+        >
+        <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Canva</span
+        ><span data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"
+          >Elementor</span
+        >
+      </div>
+    </div>
+    <div id="about"></div>
+    <div
+      class="about"
+      data-aos="flip-left"
+      data-aos-delay="50"
+      data-aos-duration="700"
+      data-aos-offset="100"
+    >
+      <h5>About Me</h5>
+      <p>
+        I'm a passionate and innovative Product designer and Student Architect
+        proficient in UI/UX, Brand and Visual design, Website development. My
+        background in architecture sharpens my attention to detail, structure,
+        and aesthetics, while my product design practice allows me to translate
+        ideas into intuitive and insightful user experiences. <br />
+        I'm also a collaborative team player, working effectively with
+        stakeholders, fellow creatives and team members to deliver high quality
+        solution on time.
+      </p>
+    </div>
+    <div id="project"></div>
+    <div
+      class="projects"
+      data-aos="flip-right"
+      data-aos-delay="50"
+      data-aos-duration="700"
+      data-aos-offset="100"
+    >
+      <h2 data-aos="fade-down" data-aos-delay="50" data-aos-duration="300">
+        My Projects
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="200">
+        Here are some of my recent works that showcase my skills and passion
+        development.
+      </p>
+
+      <div
+        class="project-card"
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="500"
+      >
+        <img src="./assets/bean-scene.png" alt="" />
+        <h5>Bean scene Coffee Website - E-commerce Website</h5>
+        <p>
+          Collaborated with a team to develop Bean Scene, a website that enables
+          small businesses and local shops to reach more potential customers and
+          give them access to showcase their product on a larger platform. The
+          platform empowers businesses to establish a 24/7 online presence
+          without technical barriers.
+        </p>
+        <button class="view-demo">
+          <a
+            href="https://robotinic17.github.io/Coffeo-Website/"
+            target="_blank"
+            >Demo-View</a
+          >
+        </button>
+      </div>
+      <div
+        class="project-card"
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="500"
+      >
+        <img src="./assets/damien.jpg" alt="" />
+        <h5>DAMIEN Photography - Portfolio Website</h5>
+        <p>
+          Led a team in developing a professional portfolio website that serves
+          as a digital studio, gallery, and booking platform for photographers.
+          The website helps them to showcase their curated works, brand
+          identity, and provide a seamless way for clients to explore services
+          and make contact.
+        </p>
+        <button class="view-demo">
+          <a href="?" target="_blank">Demo-View</a>
+        </button>
+      </div>
+      <div
+        class="project-card"
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="500"
+      >
+        <img src="./assets/login.png" alt="" />
+        <h5>Zentrix Lab Website - Fintech, Web3 digital website</h5>
+        <p>
+          Collaborated with a team to develop an official website for Zentrix
+          Lab, a futuristic innovation lab focused on building human aligned
+          intelligent technologies across AI, fintech, robotics, and digital
+          infrastructure for emerging markets in the world by providing
+          real-time solution and reducing business problems by 40% across the
+          globe.
+        </p>
+        <button class="view-demo">
+          <a href="https://zentrixlab.vercel.app/" target="_blank">Demo-View</a>
+        </button>
+      </div>
+    </div>
+    <footer>
+      <div class="lets-create">
+        <h3>Let's Create Together</h3>
+        <p>
+          I'm always excited to fellow creatives, potential clients and anyone
+          passionate about technology and design. Whether you have a project in
+          mind or just whant to say hello. I'm here to Collaborate
+        </p>
+      </div>
+      <div class="get-in-touch">
+        <h3>get in touch</h3>
+        <p>
+          Have a project in mind? Let's discuss how we can work together to
+          bring your ideas to life
+        </p>
+      </div>
+      <div class="buttons">
+        <button>
+          <a href="https://www.behance.net/ayodelebello1" target="_blank"
+            >View Designs</a
+          >
+        </button>
+        <button><a href="#">Get in Touch</a></button>
+      </div>
+      <div class="socials">
+        <h3>socials</h3>
+        <div class="lits-socials">
+          <span><a href="#">LinkDen</a></span>
+          <span
+            ><a href="https://www.behance.net/ayodelebello1" target="_blank"
+              >BeHance</a
+            ></span
+          >
+          <span
+            ><a href="https://x.com/AyodeleBel56121?s=09" target="_blank"
+              >Twitter</a
+            ></span
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80 },
+          color: { value: "#000000" }, // dots black
+          line_linked: {
+            enable: true,
+            color: "#000000", // lines black
+            opacity: 0.4,
+            width: 1,
+          },
+          size: { value: 2 },
+          move: { speed: 2 },
+        },
+      });
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

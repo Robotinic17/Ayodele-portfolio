@@ -1,0 +1,466 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Geist", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 1);
+}
+
+#particles-js {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* keeps it behind all your stuff */
+  }
+
+
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 3.65rem;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.411);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    padding: .5rem 5%;
+    z-index: 1000;
+    animation: slideIn 1s   linear forwards ;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-150%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 90%;
+    z-index: 10000;
+    background: darkgrey;
+    height: 100dvh;
+    transition: right 0.5s ease-in-out;
+}
+
+#overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    gap: 1.5rem;
+}
+
+nav li:nth-child(1) {
+    align-self: flex-end;
+    width: fit-content;
+    justify-self: flex-start;
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+nav li a {
+    text-decoration: none;
+    font-family: 'Quicksand' sans-serif;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    padding: 5px 0 5px 10px;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.active{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.Xmenu{
+    cursor: pointer;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    font-family: "Geist", sans-serif;
+}
+
+.name :nth-child(1){
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.name :nth-child(2){
+    font-weight: 500;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.hamburger{
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.hamburger img{
+    width: 27px;
+    height: 18px;
+}
+
+.logo {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 80%;
+    height: 9rem;
+    position: relative;
+    margin-top: 7rem;
+    -webkit-clip-path: ellipse(50% 40% at 50% 50%);
+    clip-path: ellipse(40% 95% at 47% 96%);
+}
+
+.logo img{
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+}
+
+.intro {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin-top: 10rem;
+    justify-self: center;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-1{
+    font-family: Geist;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.intro-2{
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.intro-2 :nth-child(1){
+    font-family: Geist;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.intro-2 :nth-child(2){
+    font-family: Geist;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.intro-3{
+    font-family: Geist;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.skills{
+    display: flex;
+    position: relative;
+    justify-self: center;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.skills h2{
+    text-transform: capitalize;
+    font-family: Geist;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    width: auto;
+    height: auto;
+    justify-self: center;
+    gap: 15px 20px;
+}
+
+.skills-list span {
+    width: 170px;
+    height: 55px;
+    border-radius: 10px;
+    font-family: Geist;
+    font-weight: 600;
+    font-size: 22px;
+    background: rgba(217, 217, 217, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about{
+    display: flex;
+    position: relative;
+    justify-self: center;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.about h5{
+    font-family: Geist;
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.about p{
+    font-family: Geist;
+    font-weight: 400;
+    font-size: 15px;
+    word-break: keep-all;
+}
+
+.projects{
+    display: flex;
+    position: relative;
+    justify-self: center;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.projects h2{
+    font-family: Geist;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.projects p{
+    font-family: Geist;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.project-card{
+    background: rgba(249, 249, 249, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: auto;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.project-card h5 {
+    font-family: Geist;
+    font-weight: 600;
+    font-size: 18px;
+    width: 85%;
+}
+
+.view-demo {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    font-family: Geist;
+    font-weight: 400;
+    font-size: 15px;
+    background: none;
+    border: none;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+.view-demo a{
+    color: inherit;
+    text-underline-offset: 8px;
+}
+
+.project-card p {
+    font-family: Geist;
+    font-weight: 400;
+    font-size: 15px;
+    width: 85%;
+    margin-top: .5rem;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+body > div.projects > div:nth-child(4) > h5{
+    margin-top: 2rem;
+}
+
+footer{
+    width: 100%;
+    height:auto;
+    backdrop-filter: blur(3px);
+    display: grid;
+    padding: 10px 20px;
+    margin-top: 4rem;
+    box-shadow: 17px 5px 17px 0px darkgrey;
+    gap: 1rem;
+}
+
+.lets-create h3{
+    font-family: Geist;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.get-in-touch h3{
+    font-family: Geist;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.lets-create p{
+    font-family: Geist;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(17, 17, 17, 0.8);
+    margin-top: .5rem;
+}
+
+.get-in-touch p{
+    font-family: Geist;
+    margin-top: .5rem;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buttons :nth-child(1){
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700;
+    border: solid 1px black;
+    border-radius: 10px;
+    background: transparent;
+    padding: 10px 20px;
+    font-family: geist sans-serif;
+}
+.buttons :nth-child(1) a{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background: transparent;
+}
+
+
+
+.buttons :nth-child(2){
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    background: blue;
+    padding: 10px 20px;
+    font-family: geist sans-serif;
+    color: white;
+    border: none;
+}
+.buttons :nth-child(2) a{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background: transparent;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.socials h3{
+    font-family: Geist;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.lits-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.lits-socials a{
+    color: inherit;
+    border: none;
+    background: transparent;
+    text-underline-offset: 2px;
+}
+
